@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Кішай Максим ПП-24</title>
+	</head>	
+	<body>
+		<script>
+			"use strict";
+			
+			// Встановлюємо дату наступного дня народження
+			let today = new Date();
+			let birthdayMonth = 7; // Місяць вашого дня народження (0 - січень, 7 - серпень)
+			let birthdayDate = 24; // День вашого народження
+			let birthday = new Date(today.getFullYear(), birthdayMonth, birthdayDate);
+
+			// Якщо день народження вже минув у цьому році
+			if (today > birthday) {
+				birthday.setFullYear(today.getFullYear() + 1);
+			}
+
+			// Константи для мілісекунд у дні, годині та хвилині
+			const day = 86400000;
+			const hour = 3600000;
+			const minute = 60000;
+
+			// Розрахунок залишку часу
+			let time = birthday.getTime() - today.getTime();
+			let days = Math.floor(time / day);
+			let hours = Math.floor((time - days * day) / hour);
+			let minutes = Math.floor((time - days * day - hours * hour) / minute);
+
+			// Формування рядка результату
+			let str = days + " днів, " + hours + " годин, " + minutes + " хвилин.";
+			console.log("До вашого дня народження залишилося:", str);
+			alert("До вашого дня народження залишилося: " + str);
+		</script>
+	</body>
+</html>

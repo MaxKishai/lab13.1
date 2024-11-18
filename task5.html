@@ -1,0 +1,23 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Кішай Максим ПП-24</title>
+	</head>	
+	<body>
+		<script>
+			"use strict";
+			// Функція для виведення тексту з кольором і розміром шрифту
+			function printStyledText(txt, color = "black", size = 14) {
+				document.write(`<div style="color:${color}; font-size:${size}pt">${txt}</div>`);
+			}
+
+			// Виклики функції з різними параметрами
+			printStyledText("Великий червоний текст", "red", 24);
+			printStyledText("Текст за замовченням", undefined, 16); // Кольори за замовченням
+			printStyledText("Синій текст зі стандартним розміром", "blue"); // Розмір за замовченням
+			printStyledText("Малий зелений текст", "green", 10);
+		</script>
+         <p> <a href="index.html" target="_blank">Назад</a> </p>
+	</body>
+</html>

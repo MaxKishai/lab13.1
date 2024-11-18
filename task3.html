@@ -1,0 +1,23 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Кішай Максим ПП-24</title>
+	</head>	
+	<body>
+		<script>
+			// Опис функції виведення рядка з кольором, розміром і переходом на новий рядок
+			function PrintStyled(txt, color, size) { 
+				document.write(
+					`<span style="color:${color}; font-size:${size}px;">${txt}</span><br />`
+				);
+			}
+
+			// Звертання до функції з передачею параметрів
+			PrintStyled("Це перший кольоровий рядок", "red", 16);
+			PrintStyled("Це другий синій рядок", "blue", 20);
+			PrintStyled("Це ще один зелений рядок", "green", 18);
+		</script>
+        <p> <a href="index.html" target="_blank">Назад</a> </p>
+	</body>
+</html>

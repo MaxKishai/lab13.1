@@ -1,0 +1,44 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Кішай Максим ПП-24</title>
+    <style>
+        .day {
+            font-family: Arial, sans-serif;
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        "use strict";
+
+        // Функція для відображення дня тижня з аргументами size, day, color
+        function weekDay(size, day, color) {
+            let dayElement = document.createElement("div");
+            dayElement.className = "day";
+            dayElement.style.fontSize = size + "px";
+            dayElement.style.color = color;
+            dayElement.textContent = day;
+            document.body.appendChild(dayElement);
+        }
+
+        // Назви днів тижня
+        const days = [
+            "Понеділок", "Вівторок", "Середа",
+            "Четвер", "П’ятниця", "Субота", "Неділя"
+        ];
+
+        // Масив розмірів і кольорів для прикладу
+        const sizes = [20, 22, 24, 26, 28, 30, 32];
+        const colors = ["red", "blue", "green", "orange", "purple", "brown", "teal"];
+
+        // Виклик функції для кожного дня
+        for (let i = 0; i < days.length; i++) {
+            weekDay(sizes[i], days[i], colors[i]);
+        }
+    </script>
+     <p> <a href="index.html" target="_blank">Назад</a> </p>
+</body>
+</html>
